@@ -4,3 +4,17 @@ https://webix.com/widget/tree/
 http://angular-ui-tree.github.io/angular-ui-tree/#/basic-example
 https://www.infragistics.com/products/ignite-ui/grids-and-lists/tree-grid
 https://www.jstree.com/demo/
+
+parseFloat()
+parseInt()
+getElementById()
+getElementsByTagName
+querySelector()
+querySelectorAll()
+innerHtml
+innerText (IE)
+textContent
+getAttribute()
+setAttribute()
+className
+htmlFor
