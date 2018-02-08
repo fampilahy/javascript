@@ -18,3 +18,28 @@ getAttribute()
 setAttribute()
 className
 htmlFor
+parentNode
+toLowerCase()
+toUpperCase()
+nodeType 1,2,3,...12
+1=> element
+2=> attribute
+3=> texte
+8=> commentaire
+firstChild
+lastChild
+firstElementChild
+lastElementChild
+nodeValue et Data 
+Node.ELEMENT_NODE 
+nextSibling et previousSibling
+nextElementSibling previousElementSibling
+document.createElement()
+appendChild()
+document.createTextNode()
+cloneNode()
+replaceChild()
+removeChild()
+hasChildNodes()
+insertBefore()
+
