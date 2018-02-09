@@ -2,18 +2,47 @@
 <head>
 </head>
 <body>
+<!-- <div id="divTP1"> -->
+<!--     Le <strong>World Wide Web Consortium</strong>, abrégé par le sigle <strong>W3C</strong>, est un -->
+<!--     <a href="http://fr.wikipedia.org/wiki/Organisme_de_normalisation" title="Organisme de normalisation">organisme de standardisation</a> à but non-lucratif chargé de promouvoir la compatibilité des technologies du <a href="http://fr.wikipedia.org/wiki/World_Wide_Web" title="World Wide Web">World Wide Web</a>. -->
+<!-- </div> -->
 <script >
 
-var a = "hello world";
-alert(a);
 
-var b = parseInt("244");
-alert(b);
 
-function test(){
-	alert(2);
-	
-}
+var divTP1 = document.body.appendChild(document.createElement('div'));
+divTP1.id='divTP1';
+
+var text1 = divTP1.appendChild(document.createTextNode(' Le '));
+var strong = divTP1.appendChild(document.createElement('strong'));
+var text2 = strong.appendChild(document.createTextNode('World Wide Web Consortium'));
+var text3 = divTP1.appendChild(document.createTextNode(', abrégé par le sigle '));
+
+var strong1 = divTP1.appendChild(document.createElement('strong'));
+strong1.textContent = 'W3C';
+// strong1.innerHtml = '<em>W3C</em>';
+// strong1.appendChild(document.createTextNode('W3C'));
+
+var text4 = divTP1.appendChild(document.createTextNode(', est un '));
+
+var a = document.createElement('a');
+divTP1.appendChild(a);
+a.href = 'http://fr.wikipedia.org/wiki/Organisme_de_normalisation';
+a.title='Organisme de normalisation';
+a.textContent = 'organisme de standardisation';
+
+var a1 = document.createElement('a');
+a1.setAttribute('href','http://fr.wikipedia.org/wiki/World_Wide_Web');
+divTP1.appendChild(a1);
+a1.appendChild(document.createTextNode('World Wide Web'));
+
+var text5 = document.createTextNode(' à but non-lucratif chargé de promouvoir la compatibilité des technologies du ');
+divTP1.insertBefore(text5,a1);
+
+
+
+
+
 
 
 </script>

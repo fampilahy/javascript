@@ -21,7 +21,7 @@ htmlFor
 parentNode
 toLowerCase()
 toUpperCase()
-nodeType 1,2,3,...12
+nodeType return  values 1,2,3,...12
 1=> element
 2=> attribute
 3=> texte
