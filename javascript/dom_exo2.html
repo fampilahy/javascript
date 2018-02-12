@@ -1,0 +1,54 @@
+<html>
+
+
+
+<body>
+
+
+<!-- <div id="divTP2"> -->
+<!--     <p>Langages basés sur ECMAScript :</p> -->
+
+<!--     <ul> -->
+<!--         <li>JavaScript</li> -->
+<!--         <li>JScript</li> -->
+<!--         <li>ActionScript</li> -->
+<!--         <li>EX4</li> -->
+<!--     </ul> -->
+<!-- </div> -->
+
+
+</body>
+<script>
+
+var mainDiv = document.createElement('div');
+mainDiv.setAttribute('id','divTP2');
+
+var ptag = document.createElement('p');
+ptag.textContent = 'Langages basés sur ECMAScript :';
+mainDiv.appendChild(ptag);
+
+var ulTag = document.createElement('ul');
+
+var textNodes = [
+	document.createTextNode('JavaScript'),
+	document.createTextNode('JScript'),
+	document.createTextNode('ActionScript'),
+	document.createTextNode('EX4')
+];
+
+var liTags ;
+var currentLi;
+for( var index=0;index<4;index++){
+	currentLi = document.createElement('li');
+	currentLi.appendChild(textNodes[index]);
+	ulTag.appendChild(currentLi);
+}
+
+
+mainDiv.appendChild(ulTag);
+document.body.appendChild(mainDiv);
+
+
+
+</script>
+</html>

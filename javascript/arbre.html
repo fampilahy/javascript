@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style type="txt/css">
+            ul, li{
+                width : 50px;
+                border : 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+ 
+        <script type="text/javascript" src="http://www.google.com/jsapi?key=VOTRE_CLE"></script>
+        <script type="text/javascript">google.load("jquery", "1.7");</script>
+        <script type="text/javascript">
+            $(document).ready (function (){
+ 
+                var number = 0;
+ 
+                var selectedItem = null;
+ 
+                //On selectionne l'élément de la liste dans lequel on veut ajouter un fils.
+                $("li").live('click', function(e) {
+                    selectedItem = $(e.target);
+                });
+ 
+                 $("ul").click(function(e) {
+                   selectedItem = $(e.target);
+                });
+ 
+                //On ajoute le fils en fonction du père :
+                // -Si c'est un <ul> on ajoute un <li>
+                // -Si c'est un <li> on ajoute un <ul>
+                $("#button_add_node").click (function () {
+ 
+                    if (selectedItem == null)
+                        alert ("Please select a valid item before adding node");
+                    else {
+                        switch (selectedItem.get(0).tagName )
+                        {
+                            case "UL" :
+                                selectedItem.append("<li>New Node</li>");
+                            break;
+                            case "LI" :
+                                selectedItem.append("<ul>New Node</ul>");  
+                            break;
+                            default :
+                                alert ("Please select a valid item before adding node");
+                        }
+                    }
+                });
+            });
+        </script>
+        <div id="tree">
+            <ul>
+                root
+            </ul>
+        </div>
+        <div>
+            <input type="button" id="button_add_node" value="Add node"/>
+        </div>
+    </body>
+</html>
