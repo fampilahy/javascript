@@ -46,4 +46,5 @@ replaceChild()
 removeChild()
 hasChildNodes()
 insertBefore()
+removeAttribute()
 
