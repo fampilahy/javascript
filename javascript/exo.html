@@ -1,0 +1,48 @@
+<table>
+	<thead>
+		<tr>
+			<th scope="col">Navigateurs</th>
+			<th scope="col">Développeurs</th>
+			<th scope="col">Parts de marché</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th scope="row">Internet Explorer</th>
+			<td>Microsoft</td>
+			<td>33,8%</td>
+		</tr>
+		<tr>
+			<th scope="row">Chrome</th>
+			<td>Google</td>
+			<td>24,4%</td>
+		</tr>
+		<tr>
+			<th scope="row">Safari</th>
+			<td>Apple</td>
+			<td>11,8%</td>
+		</tr>
+
+
+
+		<script>
+			var tableBody = document.querySelector('table tbody');
+			
+			var row = tableBody.firstElementChild.cloneNode();
+			alert(row.hasChildNodes());
+			alert(row.nodeName);
+// 			row.firstElementChild.textContent = 'Firefox';
+// 			row.firstElementChild.nextElementSibling.textContent = 'Mozilla';
+// 			row.firstElementChild.lastElementChild.textContent = '27,8%';
+// 			tableBody.insertBefore(row,
+// 					tableBody.lastElementChild.previousElementSibling);
+		</script>
+
+
+	</tbody>
+
+
+
+
+
+</table>
