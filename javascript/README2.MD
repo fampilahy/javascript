@@ -41,7 +41,7 @@ nextElementSibling previousElementSibling
 document.createElement()
 appendChild()
 document.createTextNode()
-cloneNode()
+cloneNode() cloneNode(true) cloneNode(false)
 replaceChild()
 removeChild()
 hasChildNodes()

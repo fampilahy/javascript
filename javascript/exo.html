@@ -25,18 +25,7 @@
 
 
 
-		<script>
-			var tableBody = document.querySelector('table tbody');
-			
-			var row = tableBody.firstElementChild.cloneNode();
-			alert(row.hasChildNodes());
-			alert(row.nodeName);
-// 			row.firstElementChild.textContent = 'Firefox';
-// 			row.firstElementChild.nextElementSibling.textContent = 'Mozilla';
-// 			row.firstElementChild.lastElementChild.textContent = '27,8%';
-// 			tableBody.insertBefore(row,
-// 					tableBody.lastElementChild.previousElementSibling);
-		</script>
+		
 
 
 	</tbody>
@@ -46,3 +35,14 @@
 
 
 </table>
+
+<script>
+			var tableBody = document.querySelector('table tbody');
+
+			var row = tableBody.firstElementChild.cloneNode(true);
+			row.firstElementChild.textContent = 'Firefox';
+			row.firstElementChild.nextElementSibling.textContent = 'Mozilla';
+			row.lastElementChild.textContent = '27,8%';
+			tableBody.insertBefore(row,
+					tableBody.lastElementChild.previousElementSibling);
+		</script>
