@@ -1,0 +1,54 @@
+beaucoup trop d'ecriture du heritage des comportements
+il faut que ca soit seulement le div parent 
+
+
+<div id="mainDiv">
+	<div id="div1">div1</div>
+	<div id="div2">div1</div>
+	<div id="div3">div1</div>
+</div>
+<span></span>
+
+<style>
+#mainDiv {
+	padding: 10px;
+	background-color: #000;
+	margin-top: 100px;
+	margin-left: 100px;
+	height: 500px;
+	width: 500px;
+	background-color: #000;
+}
+
+#mainDiv>div {
+	margin: 40px;
+	background-color: #555;
+	color: red;
+	align: center;
+	text-align: center;
+	height: 100px;
+	width: 350px;
+}
+
+span {
+	background-color: #000;
+	color: blue;
+	font: bold;
+}
+</style>
+
+<script>
+	var mainDiv = document.getElementById('mainDiv');
+	mainDiv.addEventListener('mouseover', function(event) {
+		
+		var relatedTarget =event.relatedTarget;
+		while(relatedTarget!=mainDiv && relatedTarget.nodeName!='BODY'){
+			relatedTarget = event.relatedTarget.parentNode;
+		}
+		
+		if(relatedTarget!=mainDiv)
+		document.getElementsByTagName('span')[0].innerHTML += ''+event.target.id+'<br/>';
+	}
+
+	);
+</script>

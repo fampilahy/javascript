@@ -1,0 +1,92 @@
+<html>
+<head>
+<style>
+.draggable {
+	width: 80px;
+	height: 80px;
+	background-color: #555;
+	border: 0px;
+	padding: 0px;
+	text-align: center;
+	font-size: 64;
+	position: absolute;
+	
+	
+	/* L'utilisateur ne pourra plus sélectionner le texte de l'élément qui possède cette propriété CSS */
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+</style>
+</head>
+<body>
+	<div id="div1" class="draggable">1</div>
+	<div id="div2" class="draggable">2</div>
+	<div id="div1" class="draggable">3</div>
+	<div id="div2" class="draggable">4</div>
+
+	<script>
+	
+	
+	var data = {};
+	
+	var draggables = document.querySelectorAll('.draggable');
+	if(draggables && draggables.length>0){
+		
+		for(var draggableIndex=0; draggableIndex<draggables.length;draggableIndex++){
+			if(draggableIndex==0){
+				alert(getComputedStyle(draggables[0]).width+'');
+			}
+			draggables[draggableIndex].addEventListener('mousedown',
+		function(event){
+			data.target = event.target;
+			data.eventDistX = event.clientX - event.target.offsetLeft;
+			data.eventDistY = event.clientY - event.target.offsetTop;
+			data.target.style.width = (data.target.offsetWidth *2) + 'px';
+		},false);
+		
+		draggables[draggableIndex].addEventListener('mouseup',
+				function(e){
+					data = {};
+				},false);
+		
+		document.body.addEventListener('mousemove',function(action){
+			
+			if(data){
+				data.target.style.marginLeft = action.clientX - data.eventDistX + 'px';
+				data.target.style.marginTop = action.clientY - data.eventDistY + 'px';
+				
+				
+				
+			}
+			
+		}
+				
+		
+		
+		);
+			
+			
+			
+		}
+		
+		
+	}
+	
+	
+	
+	
+	
+	</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

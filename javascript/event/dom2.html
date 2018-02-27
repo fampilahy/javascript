@@ -1,0 +1,30 @@
+<div id="div">
+
+
+	<span id="span"> cliquez moi </span>
+
+</div>
+
+<script>
+
+var myFunction = function(){
+	
+	alert('vous avez cliquE ');
+	
+}
+
+
+var showMessage = function  ( event){
+	
+	alert('message '+event.currentTarget.nodeName);
+}
+
+var span = document.querySelector('div > span');
+span.addEventListener('click',showMessage);
+
+
+
+var div = document.querySelector('div');
+div.addEventListener('click',showMessage);
+
+</script>

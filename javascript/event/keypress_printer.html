@@ -1,0 +1,16 @@
+<input type="text" id="stuffInput" />
+<output id="stuffOutput"></output>
+Complétez le code suivant. Le but est, qu'au cours de la frappe, le contenu du champ soit retranscrit dans l'élément <output>
+
+
+<script>
+var stuff = document.querySelector("#stuffInput");
+var output = document.querySelector("#stuffOutput");
+
+if (stuff && output) {
+    
+stuff.addEventListener("keyup", function() {
+	output.innerHTML= stuff.value.trim();
+    });
+}
+</script>

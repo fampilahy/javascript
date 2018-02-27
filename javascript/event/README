@@ -1,0 +1,80 @@
+without DOM
+<a href="http://www.google.com" onclick="alert('a');return false;">click</a>
+
+
+
+
+
+
+
+
+
+
+DOM-0
+<span id="clickme">Cliquez-moi !</span>
+
+<script>
+    var element = document.getElementById('clickme');
+    element.onclick = function() {
+        alert("Vous m'avez cliqué !");
+    };
+    //fonction anonyme vide pour supprimer les evenements
+    //limite vieux et ne peux pas avoir le meme event plusieurs fois
+</script>
+
+
+
+
+
+
+
+
+
+
+DOM-2
+<span id="clickme">Cliquez-moi !</span>
+<script>
+    var element = document.getElementById('clickme');
+    element.addEventListener('click', function() {
+        alert("Vous m'avez cliqué !");
+    });
+</script>
+
+element.addEventListener('click', myFunction); // On crée l'événement
+
+element.removeEventListener('click', myFunction); // On supprime l'événement en lui repassant les mêmes paramètres
+
+capture (event priority parent to child)
+bubbling (child to parent and the default for eventListener)
+//for bubbling param false
+ boul1.addEventListener('click', function() {
+        alert("L'événement du div vient de se déclencher.");
+    }, false);
+    
+    
+    
+evenement 
+ element.addEventListener('click', function(e) {
+        alert("Vous m'avez cliqué !");
+    });
+  e.target
+  e.currentTarget
+  e.clientX
+  e.clientY
+  e.keyCode
+  e.preventDefault()
+ 
+ e.relatedTarget (mouseover et mouseout)
+ 
+ 
+ property value (input)
+ property boolean checked, disabled, readonly
+ //radio
+ document.querySelectorAll('input[type=radio]:checked')
+ 
+ //list deroulante 
+  var list = document.getElementById('list');
+    list.addEventListener('change', function() {
+        // On affiche le contenu de l'élément <option> ciblé par la propriété selectedIndex
+        alert(list.options[list.selectedIndex].innerHTML);
+    });

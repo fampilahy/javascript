@@ -1,0 +1,44 @@
+<div id="mainDiv">
+
+
+
+	<table>
+
+		<tr>
+			<th>keydown</th>
+			<td id="down"></td>
+
+		</tr>
+
+		<tr>
+			<th>keypress</th>
+			<td id="press"></td>
+
+		</tr>
+
+		<tr>
+			<th>keyup</th>
+			<td id="up"></td>
+
+		</tr>
+
+	</table>
+
+
+
+
+
+</div>
+
+<script>
+
+var keyDownFunction = function (event){
+	 document.getElementById('down').innerHTML =''+String.fromCharCode(event.keyCode);
+	
+}
+
+document.addEventListener('keydown',keyDownFunction);
+
+
+
+</script>

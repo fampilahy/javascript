@@ -1,0 +1,67 @@
+<div id="mainDiv">
+
+<div id="div0">
+ici div 0
+</div><div id="div1">
+ici div 1
+</div><div id="div2">
+ici div 2
+</div>
+
+<span id="span"></span>
+
+</div>
+
+<style>
+#mainDiv {
+    margin-left: 100px;
+     margin-top: 0px;
+}
+
+#span {
+color:white;
+}
+
+#mainDiv {
+    padding: 10px;
+    height: 500px;
+    width: 500px;
+    text-align: center;
+    background-color: #000;
+}
+
+#mainDiv > div {
+height:50px;
+    margin-left: 40px;
+    background-color: #555;
+}
+</style>
+
+
+
+
+<script>
+
+var span1 = document.getElementById('span');
+
+var mouseOverFunction = function(event){
+	span1.innerHTML= 'mouseover related Target '+event.relatedTarget.id;
+}
+
+var mouseOutFunction = function(e){
+	span1.innerHTML = 'mouseout related Target '+e.relatedTarget.id;
+}
+
+var div1 = document.getElementById('div1');
+div1.addEventListener( 'mouseover',mouseOverFunction);
+div1.addEventListener( 'mouseout',mouseOutFunction);
+
+
+var div2 = document.getElementById('div2');
+
+
+
+
+
+
+</script>

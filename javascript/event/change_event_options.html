@@ -1,0 +1,57 @@
+<html>
+
+
+<head>
+
+<title>Options on change event</title>
+<style>
+
+select {
+margin : 0px;
+border : solid blue 1px ;
+background-color: #059;
+color : white;
+}
+
+
+</style>
+</head>
+
+
+<body>
+
+
+<select>
+<option>informatique</option>
+<option>droit</option>
+<option>mathematique</option>
+
+
+</select>
+
+
+
+
+
+<script>
+
+var select ;
+var myFunction= function(event){
+
+	
+			alert(''+event.target.selectedIndex+' '+event.target.options[event.target.selectedIndex].innerHTML);
+		
+		
+	}
+	
+
+if(select = document.querySelector('select')){
+	
+	select.addEventListener('change',myFunction,false);
+}
+
+
+
+</script>
+</body>
+</html>

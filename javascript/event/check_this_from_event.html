@@ -1,0 +1,27 @@
+<form onsubmit="return myFramework.checkThisForm()">
+<input type="text" value=""/>
+<input type="text" value=""/>
+   
+    <input type ="submit"/>
+</form>
+Complétez le code suivant afin de vérifier si tous les éléments ontiennent une valeur.
+
+
+<script>
+var  myFramework = {};
+
+myFramework["checkThisForm"] = function() {
+    var inputs =  document.querySelectorAll("input[type=text]");
+
+    for (var i=0, c=inputs.length; i<c; i++) {
+        if (!inputs[i].value) {
+//             return  false;
+alert(false);
+return;
+			}
+		}
+
+// 		return  true;
+alert(true);
+	};
+</script>
