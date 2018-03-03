@@ -1,0 +1,28 @@
+<script>
+	function Car(brand, model, color) {
+		this.brand = brand;
+		this.model = model;
+		this.color = color;
+
+		this.setBrand = function(brand) {
+			this.brand = brand
+		};
+		this.setModel = function(model) {
+			this.model = model
+		};
+		this.setColor = function(color) {
+			this.color = color
+		};
+	}
+	
+	
+	
+	
+	var patrol = new Car('Nissan','P2015',null);
+	
+	alert(patrol.brand);
+	alert(patrol.color);
+	
+	patrol.setColor('Black');
+	alert(patrol.color);
+</script>

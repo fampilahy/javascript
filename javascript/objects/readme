@@ -1,0 +1,95 @@
+literal object like 
+var object = {a : 'aaaa',b:'bbbb'};
+
+
+
+
+constructeur
+function Ville (nom,habitant,superficie){
+this.nom=nom;
+this.habitant=habitant;
+this.superficie=superficie;
+}
+
+
+
+
+appel
+var tana = new Ville('Antananarivo','2millions','5millionsm2');
+
+
+
+
+ajouter des methodes dans le constructeur
+function Ville (nom,habitant,superficie){
+this.nom=nom;
+this.habitant=habitant;
+this.superficie=superficie;
+this.setNom=function(nom){this.nom=nom};
+}
+
+
+
+
+
+ajouter des methodes via prototype
+attention prototype est differents de Prototype qui est une librairie
+c'est comme methode static, non copie a linstance, plutot appartient a la classe;
+
+
+
+
+ajout des methodes dans les Objets primitifs (natifs)
+fait attention sur Object car liste la method comme variable lors de l'impression
+ne fonctionne pas tres bien sur les DOM
+
+
+
+
+
+
+namespace une maniere de structurer les fonctions
+var myNameSpace = {
+param:function(name,people,dimention){
+alert('name '+name);
+}
+}
+
+
+
+
+
+subnamespace
+if(typeof myNameSpace ==='undefined'){
+var myNameSpace ={
+param: function(name,people,dimention){
+subnamespace : {
+  param: funciont(){};
+}
+}
+
+
+
+
+
+mot clé this dans subnamespace fait reference au subnamespace
+pour appeler un namespace parent, faut ecrire son nom
+
+
+
+
+
+
+
+modifier contexte d'une methode call(param1,param2facultatif)
+meme chose pr apply 
+permet dutiliser une methode a un element de type different
+var myArray = [];
+myArray.push.apply(myArray,[1,2]);
+==> Object.prototype.toString.call("a");
+
+
+
+
+
+
