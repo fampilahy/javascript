@@ -1,0 +1,53 @@
+<html>
+
+<img src="io.jpg">
+
+
+<head>
+<style>
+img {
+	width: 300px;
+	height: 300px;
+}
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+	<script>
+		(function() {
+
+			var img = document.getElementsByTagName('img')[0];
+
+			var anim = function() {
+				if (img.style.opacity != '0.2') {
+					var opacity = parseFloat(img.style.opacity) - 0.1;
+					img.style.opacity = '' + opacity;
+					setTimeout(anim,75);
+				} 
+			};
+			
+			function del() {
+				anim();
+			}
+
+			function init() {
+				clearInterval(anim);
+				img.style.opacity = '1';
+
+			}
+
+			img.addEventListener('mouseover', init);
+			img.addEventListener('mouseout', del);
+
+		})();
+	</script>
+</body>
+
+</html>

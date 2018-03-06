@@ -1,0 +1,89 @@
+<html>
+
+<head>
+
+</head>
+<body>
+
+<span id="result"></span>
+<script>
+
+
+
+
+
+
+(function(){
+	
+	
+	var myFunction = function(){
+		alert ('Vous n\'etes pas tres actif vous, cliquez sur le bouton!');
+	}
+	
+	var button = document.createElement('input');
+	button.type='button';
+	button.value = 'click here';
+	button.style.border='solid gray 1px';
+	button.style.backgroundColor ='#567';
+	
+	document.body.appendChild(button);
+	
+	
+	
+	
+	var interval = setInterval(myFunction,5000);
+	
+	
+	
+	button.addEventListener('click',function(event){
+		clearInterval(interval);
+		document.querySelector('#result').textContent='Temp interval deleted';
+	});
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+})();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
+
+
