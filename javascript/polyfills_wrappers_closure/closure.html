@@ -1,0 +1,49 @@
+<html>
+
+
+
+
+<head></head>
+
+
+
+
+<body>
+
+aaaaaaaaaaaaaaa
+<ul id ="container">
+
+</ul>
+
+
+<script>
+var count = 10;
+
+
+// for (var index=0;index<count; index++){
+// 	setTimeout(function(){
+// 		var li = document.createElement('li');
+// 		li.innerHTML='list numero '+index;
+// 		ul.appendChild(li);
+// 	},3000);
+// } // print everything in 10 
+
+
+for (var index=0;index<count; index++){
+	(function(i){
+		setTimeout(function(){
+			var ul = document.querySelector('#container');
+			var li = document.createElement('li');
+			li.innerHTML='list numero '+i;
+			ul.appendChild(li);
+		},500*i);
+	})(index);
+}
+
+
+
+</script>
+
+</body>
+
+</html>

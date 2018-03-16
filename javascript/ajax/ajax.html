@@ -1,0 +1,49 @@
+<html>
+
+
+
+
+
+<head>
+
+</head>
+<body>
+
+
+
+<script>
+
+<script>
+
+var xhr = new XMLHttpRequest();
+xhr.open('GET', 'http://localhost:8080/platform/matching/listreference',true);
+xhr.setRequestHeader('Content-Type', 'text/html; charset=UTF-8');
+	xhr.send(null);
+	var overlay = document.getElementById('overlay');
+	var overlay;
+	xhr.addEventListener('readystatechange', function() {
+		if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+// 			alert('statut 200');
+			 overlay = document.getElementById('overlay');
+			 overlay.innerHTML = xhr.responseText;
+		} else if (xhr.readyState === XMLHttpRequest.DONE) {
+// 			alert('status here ' + xhr.status);
+		} else {
+// 			alert('xhr ready state ' + xhr.readyState);
+// 			alert('xhr status ' + xhr.status);
+		}
+	});
+	
+
+
+	
+</script> 
+
+</script>
+</body>
+
+
+
+
+
+</html>
